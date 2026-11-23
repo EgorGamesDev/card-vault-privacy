@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Политика конфиденциальности — Сейф Карт</title>
+  <style>
+    :root {
+      --bg: #101412;
+      --surface: #1c211e;
+      --primary-container: #005230;
+      --on-primary-container: #8af2a7;
+      --text: #e1e3df;
+      --muted: #bfc9c2;
+      --primary: #6dd58c;
+      --border: #404943;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hero {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border-radius: 24px;
+      padding: 24px;
+    }
+    .hero h1 { font-size: 24px; margin-bottom: 8px; }
+    .hero p { font-size: 14px; opacity: 0.92; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .card h2 { font-size: 17px; margin-bottom: 10px; color: var(--primary); }
+    .card p, .card li { font-size: 14px; color: var(--muted); }
+    .card ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Политика конфиденциальности приложения «Сейф Карт»</h1>
+      <p>Разработчик: EgorGamesDev • Дата обновления: 2026 год</p>
+    </section>
+
+    <article class="card">
+      <h2>1. Сбор и передача персональных данных</h2>
+      <p>
+        Приложение «Сейф Карт» работает полностью автономно на устройстве пользователя.
+        Разработчик <strong>не собирает, не хранит и не передаёт</strong> никакие персональные,
+        финансовые или технические данные пользователей. У приложения отсутствует серверная часть
+        и не запрашивается разрешение на доступ к сети Интернет.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>2. Хранение и шифрование данных</h2>
+      <ul>
+        <li>Все записи, реквизиты карт и заметки сохраняются исключительно в локальной памяти вашего устройства.</li>
+        <li>Перед сохранением данные шифруются локально по алгоритму <strong>AES-256-GCM</strong> с использованием ключа, сформированного из вашего мастер-пароля через <strong>PBKDF2 (SHA-256)</strong>.</li>
+        <li>Мастер-пароль нигде не сохраняется и не может быть восстановлен разработчиком.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>3. Системные разрешения и безопасность</h2>
+      <ul>
+        <li>В приложении включена системная защита экрана от создания снимков и записи (<code>FLAG_SECURE</code>).</li>
+        <li>При копировании реквизитов запускается таймер автоматической очистки буфера обмена через 30 секунд.</li>
+        <li>Выбор и сохранение зашифрованных файлов резервных копий выполняется только по прямому действию пользователя через стандартный проводник Android.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>4. Реклама и сторонние сервисы</h2>
+      <p>
+        В приложении отсутствуют рекламные модули, счётчики аналитики, трекеры и сторонние SDK.
+        Внешние ссылки (например, контакты поддержки) открываются только при явном нажатии пользователем.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>5. Контактная информация</h2>
+      <p>
+        По вопросам конфиденциальности и работы приложения вы можете связаться с разработчиком:
+        <strong>впиши_сюда_свою_почту@gmail.com</strong>
+      </p>
+    </article>
+
+    <p class="footer">«Сейф Карт» — локальный офлайн-сейф без доступа к сети.</p>
+  </main>
+</body>
+</html>
